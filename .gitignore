@@ -1,0 +1,8 @@
+*.zip
+*.pyc
+.DS_Store
+outputfile.txt
+node.js/.env
+node.js/node_modules
+node.js/dist
+

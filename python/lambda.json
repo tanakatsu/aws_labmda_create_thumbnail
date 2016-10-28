@@ -1,0 +1,12 @@
+{
+  "name": "PyThumb",
+  "description": "(python) create thumbnail sample",
+  "region": "ap-northeast-1",
+  "handler": "pythumb.lambda_handler",
+  "role": "[YOUR LAMBDA EXECUTION ROLE ARN]",
+  "timeout": 300,
+  "memory": 256,
+  "ignore": [
+    "PIL_ec2/*"
+  ]
+}

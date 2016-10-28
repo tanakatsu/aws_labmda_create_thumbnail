@@ -1,0 +1,5 @@
+{
+  "bucket": "your-s3-bucket",
+  "srcKey": "original.jpg",
+  "dstKey": "thumbnail.jpg"
+}
