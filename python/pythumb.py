@@ -3,8 +3,14 @@ import StringIO
 import tempfile
 import boto3
 import time
+import json
 
-s3 = boto3.resource('s3')
+env = {}
+with open('env.json') as f:
+    env = json.load(f)
+
+session = boto3.Session(aws_access_key_id=env['AWS_ACCESS_KEY_ID'], aws_secret_access_key=env['AWS_SECRET_ACCESS_KEY'], region_name=env['AWS_REGION_NAME'])
+s3 = session.resource('s3')
 
 convert_image = {
     1: lambda img: img,
