@@ -49,17 +49,17 @@ def lambda_handler(event, context):
 
         if orientation >= 5:
             print "resized to %d x %d" % (img.height / 2, img.width / 2)
-            resized_img = rotated_img.resize((img.height / 2, img.width / 2))
+            resized_img = rotated_img.resize((img.height / 2, img.width / 2), resample=Image.LANCZOS)
             print 'input width(rotated)=', img.height
             print 'input height(rotated)=', img.width
         else:
             print "resized to %d x %d" % (img.width / 2, img.height / 2)
-            resized_img = rotated_img.resize((img.width / 2, img.height / 2))
+            resized_img = rotated_img.resize((img.width / 2, img.height / 2), resample=Image.LANCZOS)
             print 'input width(rotated)=', img.width
             print 'input height(rotated)=', img.height
 
         with tempfile.TemporaryFile() as output:
-            resized_img.save(output, 'JPEG', dpi=(72, 72), subsampling=0)  # subsampling 0=4:4:4, 1=4:2:2
+            resized_img.save(output, 'JPEG', quality=95, dpi=(72, 72), subsampling=0)  # subsampling 0=4:4:4, 1=4:2:2
             output.seek(0)
             s3.Object(bucket, dst_key).put(Body=output, ContentType='image/jpeg')
         print('uploaded')

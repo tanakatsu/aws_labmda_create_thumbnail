@@ -111,7 +111,7 @@ exports.handler = function(event, context) {
             this.autoOrient()
             .resize(target_width, target_height)
             .density(72, 72)
-            .quality(80)
+            .quality(95)
             .toBuffer(imageType, function(err, buffer) {
               if (err) {
                 done(err);
