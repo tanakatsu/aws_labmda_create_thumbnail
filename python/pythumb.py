@@ -9,7 +9,7 @@ env = {}
 with open('env.json') as f:
     env = json.load(f)
 
-session = boto3.Session(aws_access_key_id=env['AWS_ACCESS_KEY_ID'], aws_secret_access_key=env['AWS_SECRET_ACCESS_KEY'], region_name=env['AWS_REGION_NAME'])
+session = boto3.Session(aws_access_key_id=env['AWS_ACCESS_KEY_ID'], aws_secret_access_key=env['AWS_SECRET_ACCESS_KEY'], region_name=env['AWS_DEFAULT_REGION'])
 s3 = session.resource('s3')
 
 convert_image = {
