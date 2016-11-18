@@ -2,7 +2,10 @@
 *.pyc
 .DS_Store
 outputfile.txt
+event.json
 node.js/.env
 node.js/node_modules
 node.js/dist
+python/env.json
+python/lambda.json
 

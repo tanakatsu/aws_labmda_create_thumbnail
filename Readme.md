@@ -18,9 +18,14 @@ $ pip install awscli
 
 ### Node.js
 
-Rename .env.sample to .env and edit it.
+Rename sample configuration files.
 
-Next, edit event.json.
+```
+$ mv .env.sample .env
+$ mv event.sample.json event.json
+```
+
+Next, edit these files depending on your environment.
 
 Then,
 
@@ -37,7 +42,15 @@ You need to install [lambda-uploader](https://github.com/rackerlabs/lambda-uploa
 $ pip install lambda-uploader
 ```
 
-Next, edit env.json, lambda.json and event.json.
+Rename sample configuration files.
+
+```
+$ mv env.sample.json env.json
+$ mv lambda.sample.json lambda.json
+$ mv event.sample.json event.json
+```
+
+Next, edit these files depending on your environment.
 
 Then,
 
@@ -49,9 +62,15 @@ $ ./exec.sh
 ## To run on local machine
 
 ### Node.js
-Rename .env.sample to .env and edit it.
 
-Next, edit event.json.
+Rename sample configuration files.
+
+```
+$ mv .env.sample .env
+$ mv event.sample.json event.json
+```
+
+Next, edit these files depending on your environment.
 
 Then,
 
@@ -69,7 +88,14 @@ $ pip install Pillow
 $ pip install boto3
 ```
 
-Next, edit env.json and event.json.
+Rename sample configuration files.
+
+```
+$ mv env.sample.json env.json
+$ mv event.sample.json event.json
+```
+
+Next, edit these files depending on your environment.
 
 Then, 
 
