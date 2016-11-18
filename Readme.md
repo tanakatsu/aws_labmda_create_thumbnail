@@ -6,6 +6,16 @@ Thumbnail creating sample code for Node.js and Python.
 
 ## To run on AWS
 
+You have to install [AWS CLI](https://aws.amazon.com/cli/) at first.
+
+For Mac OSX user,
+
+```
+$ brew install awscli
+or
+$ pip install awscli
+```
+
 ### Node.js
 
 Rename .env.sample to .env and edit it.
@@ -23,13 +33,17 @@ Then,
 
 You need to install [lambda-uploader](https://github.com/rackerlabs/lambda-uploader).
 
-Next, edit lambda.json and event.json.
+```
+$ pip install lambda-uploader
+```
+
+Next, edit env.json, lambda.json and event.json.
 
 Then,
 
 ```
-./deploy.sh # once
-./exec.sh
+$ ./deploy.sh # once
+$ ./exec.sh
 ```
 
 ## To run on local machine
@@ -42,15 +56,20 @@ Next, edit event.json.
 Then,
 
 ```
-npm install # once
-./exec_local.sh
+$ npm install # once
+$ ./exec_local.sh
 ```
 
 ### Python
 
-You need to install PIL.
+You need to install PIL(Pillow) and boto3.
 
-Next, edit event.json. 
+```
+$ pip install Pillow
+$ pip install boto3
+```
+
+Next, edit env.json and event.json.
 
 Then, 
 
